@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded',() => {
 
     function startGame(){
         currentSnake.forEach(index => squares[index].classList.remove('snake'))
-        squares[appleIndex].classList.remove('apple')
+        squares[appleIndex].classList.remove()
         clearInterval(interval)
         score = 0;
         direction = 1
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded',() => {
         }else if(e.keyCode === 37) {
             direction = -1
         } else if(e.keyCode === 40) {
-            direction = + width
+            direction = width
         }
     }
 
