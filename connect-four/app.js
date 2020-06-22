@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         (function(index){
         squares[i].onclick = () => {
+            console.log('called here')
             if(squares[index+7].classList.contains('taken')) {
                 if(currentPlayer === 1) {
                     squares[index].classList.add('taken')
@@ -29,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function checkBoard() {
         //make const that shows all winning arrays
+        console.log('called here as well')
+
         const winningArrays = [
         [0, 1, 2, 3], [41, 40, 39, 38], [7, 8, 9, 10], [34, 33, 32, 31], [14, 15, 16, 17], [27, 26, 25, 24], [21, 22, 23, 24],
         [20, 19, 18, 17], [28, 29, 30, 31], [13, 12, 11, 10], [35, 36, 37, 38], [6, 5, 4, 3], [0, 7, 14, 21], [41, 34, 27, 20],
